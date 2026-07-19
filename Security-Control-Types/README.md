@@ -1,4 +1,4 @@
-# Lab 25 – Security Control Types
+# Lab 21 – Security Control Types
 
 ## Overview
 
