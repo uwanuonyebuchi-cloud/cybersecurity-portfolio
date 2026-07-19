@@ -1,4 +1,4 @@
-# Lab 24 – Security Controls by Function
+# Lab 22 – Security Controls by Function
 
 ## Overview
 
