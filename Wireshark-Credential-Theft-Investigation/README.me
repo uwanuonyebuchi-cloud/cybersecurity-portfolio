@@ -1,0 +1,153 @@
+#  Wireshark Credential Theft Investigation
+
+## Overview
+
+This lab simulates a Security Operations Center (SOC) investigation into a suspected credential theft incident using Wireshark. The objective was to analyze captured network traffic, identify insecure protocols transmitting credentials in plaintext, and recommend security improvements to protect sensitive user information.
+
+---
+
+## Objective
+
+The objective of this lab was to:
+
+- Capture and analyze network traffic using Wireshark.
+- Identify plaintext credentials transmitted across the network.
+- Investigate insecure protocols that expose sensitive information.
+- Recognize Indicators of Compromise (IOCs).
+- Recommend mitigation strategies to prevent credential theft.
+
+---
+
+## Lab Environment
+
+- Wireshark
+- Windows 11
+- Microsoft Word
+- GitHub
+
+---
+
+## Scenario
+
+An organization's security team suspected that user credentials had been intercepted over the network. As the security analyst, the goal was to analyze packet captures, identify exposed usernames and passwords, determine the insecure protocol involved, and recommend actions to secure future communications.
+
+---
+
+## Investigation Steps
+
+1. Opened the packet capture (PCAP) in Wireshark.
+2. Reviewed captured network traffic.
+3. Applied display filters to isolate relevant packets.
+4. Examined application-layer protocols.
+5. Identified authentication requests.
+6. Located transmitted usernames and passwords.
+7. Determined whether credentials were sent in plaintext.
+8. Documented findings and security recommendations.
+
+---
+
+## Wireshark Filters Used
+
+Examples of filters used during the investigation:
+
+- `http`
+- `tcp`
+- `ip.addr`
+- `ftp`
+- `dns`
+- `frame contains`
+- `http.request.method == "POST"`
+
+---
+
+## Evidence Collected
+
+The investigation focused on identifying:
+
+- Source IP address
+- Destination IP address
+- Username
+- Password
+- Authentication requests
+- HTTP POST requests
+- Login pages
+- Plaintext network traffic
+
+---
+
+## Indicators of Compromise (IOCs)
+
+Examples of suspicious indicators included:
+
+- Credentials transmitted without encryption
+- HTTP authentication traffic
+- Login requests over insecure protocols
+- Plaintext usernames
+- Plaintext passwords
+- Unauthorized access attempts
+
+---
+
+## Investigation Findings
+
+The analysis determined that:
+
+- User credentials were transmitted in plaintext.
+- Sensitive authentication information could be intercepted by anyone monitoring the network.
+- The use of an unencrypted protocol significantly increased the risk of credential theft.
+- Secure encrypted protocols should be used to protect authentication traffic.
+
+---
+
+## Recommended Mitigation
+
+- Replace HTTP with HTTPS.
+- Disable insecure authentication methods.
+- Enforce Multi-Factor Authentication (MFA).
+- Use encrypted communication protocols.
+- Monitor authentication logs for suspicious activity.
+- Conduct regular security awareness training.
+- Capture and analyze network traffic for future investigations.
+
+---
+
+## Skills Demonstrated
+
+- Wireshark Packet Analysis
+- Network Traffic Analysis
+- Credential Theft Investigation
+- Incident Response
+- Threat Hunting
+- HTTP Protocol Analysis
+- Packet Inspection
+- Indicator of Compromise (IOC) Identification
+- Cybersecurity Documentation
+
+---
+
+## Key Takeaways
+
+- Learned how attackers can capture credentials transmitted over insecure protocols.
+- Improved proficiency using Wireshark to analyze packet captures.
+- Identified plaintext authentication traffic during a forensic investigation.
+- Reinforced the importance of encrypted communication protocols such as HTTPS.
+- Developed practical skills used by SOC analysts and incident responders.
+
+---
+
+## Screenshots
+
+Include screenshots showing:
+
+- Wireshark packet capture
+- Display filters
+- HTTP authentication traffic
+- Plaintext credential discovery
+- Packet details
+- Investigation summary
+
+---
+
+## Outcome
+
+This lab demonstrates practical experience using Wireshark to investigate a credential theft incident by analyzing network traffic, identifying plaintext credentials, documenting indicators of compromise (IOCs), and recommending security improvements. It showcases foundational skills applicable to SOC Analyst, Cybersecurity Analyst, Incident Responder, and Digital Forensics roles.
